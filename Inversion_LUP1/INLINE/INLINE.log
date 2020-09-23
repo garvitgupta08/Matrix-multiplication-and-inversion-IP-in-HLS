@@ -1,0 +1,764 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Inversion_LUP1/inverse.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 184.277 ; gain = 93.504
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 184.277 ; gain = 93.504
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'lup' into 'inverse_top' (Inversion_LUP1/inverse.cpp:243).
+INFO: [XFORM 203-603] Inlining function 'matrix_mult' into 'inverse_top' (Inversion_LUP1/inverse.cpp:258).
+INFO: [XFORM 203-603] Inlining function 'final_perm' into 'inverse_top' (Inversion_LUP1/inverse.cpp:259).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 184.402 ; gain = 93.629
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'inverse_top' (Inversion_LUP1/inverse.cpp:231->Inversion_LUP1/inverse.cpp:259) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 217.559 ; gain = 126.785
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 2 for loop 'univ_label31' (Inversion_LUP1/inverse.cpp:192:1) in function 'Upper_inv'.
+INFO: [XFORM 203-102] Automatically partitioning small array 'P' (Inversion_LUP1/inverse.cpp:240) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'P' (Inversion_LUP1/inverse.cpp:240) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'inverse_top' (Inversion_LUP1/inverse.cpp:231->Inversion_LUP1/inverse.cpp:259) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Inversion_LUP1/inverse.cpp:85:25) to (Inversion_LUP1/inverse.cpp:87:5) in function 'inverse_top'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 275.867 ; gain = 185.094
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 297.301 ; gain = 206.527
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inverse_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 23.59 seconds; current allocated memory: 239.958 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.519 seconds; current allocated memory: 240.381 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.562 seconds; current allocated memory: 240.685 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.444 seconds; current allocated memory: 241.084 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.02 seconds; current allocated memory: 242.420 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.305 seconds; current allocated memory: 244.027 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fadd_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fadd_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'inverse_top_fmul_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fdiv_32ns_32ns_32_16_1' to 'inverse_top_fdiv_dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Lower_inv'.
+INFO: [HLS 200-111]  Elapsed time: 1.587 seconds; current allocated memory: 244.801 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Upper_inv'.
+INFO: [HLS 200-111]  Elapsed time: 0.885 seconds; current allocated memory: 245.680 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A_inv' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inverse_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'inverse_top_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_faddfeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_sitofp_32ns_32_6_1' to 'inverse_top_sitoffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fcmp_32ns_32ns_1_2_1' to 'inverse_top_fcmp_g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_mux_42_32_1_1' to 'inverse_top_mux_4hbi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_faddfeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fcmp_g8j': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_mux_4hbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_sitoffYi': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inverse_top'.
+INFO: [HLS 200-111]  Elapsed time: 1.407 seconds; current allocated memory: 248.558 MB.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_L_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 327.957 ; gain = 237.184
+INFO: [VHDL 208-304] Generating VHDL RTL for inverse_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for inverse_top.
+INFO: [HLS 200-112] Total elapsed time: 36.696 seconds; peak allocated memory: 248.558 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Inversion_LUP1/inverse.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 184.336 ; gain = 93.602
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 184.336 ; gain = 93.602
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'lup' into 'inverse_top' (Inversion_LUP1/inverse.cpp:255).
+INFO: [XFORM 203-603] Inlining function 'matrix_mult' into 'inverse_top' (Inversion_LUP1/inverse.cpp:271).
+INFO: [XFORM 203-603] Inlining function 'final_perm' into 'inverse_top' (Inversion_LUP1/inverse.cpp:272).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 184.492 ; gain = 93.758
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'inverse_top' (Inversion_LUP1/inverse.cpp:243->Inversion_LUP1/inverse.cpp:272) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 217.758 ; gain = 127.023
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'lup_label0' (Inversion_LUP1/inverse.cpp:37) in function 'inverse_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-5' (Inversion_LUP1/inverse.cpp:259) in function 'inverse_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'uinv_label10' (Inversion_LUP1/inverse.cpp:184) in function 'Upper_inv' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'univ_label31' (Inversion_LUP1/inverse.cpp:201) in function 'Upper_inv' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 2 for loop 'univ_label31' (Inversion_LUP1/inverse.cpp:203:1) in function 'Upper_inv'.
+WARNING: [XFORM 203-503] Cannot unroll loop 'find_max' (Inversion_LUP1/inverse.cpp:50) in function 'inverse_top' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'swap_row' (Inversion_LUP1/inverse.cpp:72) in function 'inverse_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (Inversion_LUP1/inverse.cpp:81) in function 'inverse_top' completely with a factor of 3.
+WARNING: [XFORM 203-503] Cannot unroll loop 'lup_label1' (Inversion_LUP1/inverse.cpp:97) in function 'inverse_top' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'lup_label2' (Inversion_LUP1/inverse.cpp:101) in function 'inverse_top' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5.1' (Inversion_LUP1/inverse.cpp:262) in function 'inverse_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'uinv_label11' (Inversion_LUP1/inverse.cpp:187) in function 'Upper_inv' completely with a factor of 3.
+WARNING: [XFORM 203-503] Cannot unroll loop 'univ_label32' (Inversion_LUP1/inverse.cpp:206) in function 'Upper_inv' completely: variable loop bound.
+INFO: [XFORM 203-102] Automatically partitioning small array 'P' (Inversion_LUP1/inverse.cpp:252) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'P' (Inversion_LUP1/inverse.cpp:252) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'inverse_top' (Inversion_LUP1/inverse.cpp:243->Inversion_LUP1/inverse.cpp:272) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Inversion_LUP1/inverse.cpp:74:27) to (Inversion_LUP1/inverse.cpp:90:5) in function 'inverse_top'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 277.672 ; gain = 186.938
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'lup_label1' (Inversion_LUP1/inverse.cpp:97:4) in function 'inverse_top' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'lup_label0' (Inversion_LUP1/inverse.cpp:37:3) in function 'inverse_top' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Assign_L0' (Inversion_LUP1/inverse.cpp:110:3) in function 'inverse_top' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Assign_U0' (Inversion_LUP1/inverse.cpp:124:3) in function 'inverse_top' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'univ_label31' (Inversion_LUP1/inverse.cpp:201:4) in function 'Upper_inv' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'univ_label30' (Inversion_LUP1/inverse.cpp:199:3) in function 'Upper_inv' : 
+
+the outer loop is not a perfect loop because either the parent loop or the sub loop has no invariant trip count.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'linv_label1' (Inversion_LUP1/inverse.cpp:150:4) in function 'Lower_inv' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'linv_label0' (Inversion_LUP1/inverse.cpp:148:3) in function 'Lower_inv'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 297.516 ; gain = 206.781
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inverse_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'linv_label2'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 10.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 29.882 seconds; current allocated memory: 240.291 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.482 seconds; current allocated memory: 240.616 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'uinv_label10'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('U_inv_addr_2_write_ln188', Inversion_LUP1/inverse.cpp:188) of constant 0 on array 'U_inv' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'U_inv'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'uinv_label20'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 17.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+INFO: [SCHED 204-61] Pipelining loop 'univ_label32'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 10.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.065 seconds; current allocated memory: 241.020 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.621 seconds; current allocated memory: 241.412 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PermutMat_Initialize'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+INFO: [SCHED 204-61] Pipelining loop 'find_max'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: find_max): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'and' operation ('and_ln54_4', Inversion_LUP1/inverse.cpp:54->Inversion_LUP1/inverse.cpp:255) and 'fcmp' operation ('tmp_26', Inversion_LUP1/inverse.cpp:54->Inversion_LUP1/inverse.cpp:255).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
+INFO: [SCHED 204-61] Pipelining loop 'lup_label2'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255) on array 'A'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255) on array 'A'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255) on array 'A'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255) on array 'A'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:255) on array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 11.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('A_inv_addr_2_write_ln263', Inversion_LUP1/inverse.cpp:263) of constant 0 on array 'A_inv' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A_inv'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Assign_L1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Assign_U1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.114 seconds; current allocated memory: 242.804 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.673 seconds; current allocated memory: 244.682 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fadd_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fadd_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'inverse_top_fmul_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fdiv_32ns_32ns_32_16_1' to 'inverse_top_fdiv_dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Lower_inv'.
+INFO: [HLS 200-111]  Elapsed time: 1.792 seconds; current allocated memory: 245.544 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Upper_inv'.
+INFO: [HLS 200-111]  Elapsed time: 0.997 seconds; current allocated memory: 246.595 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A_inv' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inverse_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'inverse_top_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_faddfeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_sitofp_32ns_32_6_1' to 'inverse_top_sitoffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fcmp_32ns_32ns_1_2_1' to 'inverse_top_fcmp_g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_mux_42_32_1_1' to 'inverse_top_mux_4hbi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_faddfeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fcmp_g8j': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_mux_4hbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_sitoffYi': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inverse_top'.
+INFO: [HLS 200-111]  Elapsed time: 1.831 seconds; current allocated memory: 249.957 MB.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_L_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_U_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:22 ; elapsed = 00:00:49 . Memory (MB): peak = 328.684 ; gain = 237.949
+INFO: [VHDL 208-304] Generating VHDL RTL for inverse_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for inverse_top.
+INFO: [HLS 200-112] Total elapsed time: 49.665 seconds; peak allocated memory: 249.957 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Inversion_LUP1/inverse.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.031 ; gain = 93.652
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.031 ; gain = 93.652
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'lup' into 'inverse_top' (Inversion_LUP1/inverse.cpp:257).
+INFO: [XFORM 203-603] Inlining function 'matrix_mult' into 'inverse_top' (Inversion_LUP1/inverse.cpp:273).
+INFO: [XFORM 203-603] Inlining function 'final_perm' into 'inverse_top' (Inversion_LUP1/inverse.cpp:274).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 184.031 ; gain = 93.652
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'inverse_top' (Inversion_LUP1/inverse.cpp:245->Inversion_LUP1/inverse.cpp:274) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 216.535 ; gain = 126.156
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'lup_label0' (Inversion_LUP1/inverse.cpp:37) in function 'inverse_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-5' (Inversion_LUP1/inverse.cpp:261) in function 'inverse_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'MM_L2' (Inversion_LUP1/inverse.cpp:223) in function 'inverse_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'L1' (Inversion_LUP1/inverse.cpp:241) in function 'inverse_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'uinv_label10' (Inversion_LUP1/inverse.cpp:184) in function 'Upper_inv' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'univ_label31' (Inversion_LUP1/inverse.cpp:201) in function 'Upper_inv' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 2 for loop 'univ_label31' (Inversion_LUP1/inverse.cpp:203:1) in function 'Upper_inv'.
+WARNING: [XFORM 203-503] Cannot unroll loop 'find_max' (Inversion_LUP1/inverse.cpp:50) in function 'inverse_top' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'swap_row' (Inversion_LUP1/inverse.cpp:72) in function 'inverse_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (Inversion_LUP1/inverse.cpp:81) in function 'inverse_top' completely with a factor of 3.
+WARNING: [XFORM 203-503] Cannot unroll loop 'lup_label1' (Inversion_LUP1/inverse.cpp:97) in function 'inverse_top' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'lup_label2' (Inversion_LUP1/inverse.cpp:101) in function 'inverse_top' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5.1' (Inversion_LUP1/inverse.cpp:264) in function 'inverse_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'MM_L3' (Inversion_LUP1/inverse.cpp:227) in function 'inverse_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'L2' (Inversion_LUP1/inverse.cpp:244) in function 'inverse_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'uinv_label11' (Inversion_LUP1/inverse.cpp:187) in function 'Upper_inv' completely with a factor of 3.
+WARNING: [XFORM 203-503] Cannot unroll loop 'univ_label32' (Inversion_LUP1/inverse.cpp:206) in function 'Upper_inv' completely: variable loop bound.
+INFO: [XFORM 203-102] Automatically partitioning small array 'P' (Inversion_LUP1/inverse.cpp:254) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'P' (Inversion_LUP1/inverse.cpp:254) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'inverse_top' (Inversion_LUP1/inverse.cpp:245->Inversion_LUP1/inverse.cpp:274) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Inversion_LUP1/inverse.cpp:74:27) to (Inversion_LUP1/inverse.cpp:90:5) in function 'inverse_top'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 276.691 ; gain = 186.313
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'lup_label1' (Inversion_LUP1/inverse.cpp:97:4) in function 'inverse_top' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'lup_label0' (Inversion_LUP1/inverse.cpp:37:3) in function 'inverse_top' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Assign_L0' (Inversion_LUP1/inverse.cpp:110:3) in function 'inverse_top' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Assign_U0' (Inversion_LUP1/inverse.cpp:124:3) in function 'inverse_top' : 
+
+the outer loop is not a perfect loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'MM_L1' (Inversion_LUP1/inverse.cpp:221:3) in function 'inverse_top'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'univ_label31' (Inversion_LUP1/inverse.cpp:201:4) in function 'Upper_inv' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'univ_label30' (Inversion_LUP1/inverse.cpp:199:3) in function 'Upper_inv' : 
+
+the outer loop is not a perfect loop because either the parent loop or the sub loop has no invariant trip count.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'linv_label1' (Inversion_LUP1/inverse.cpp:150:4) in function 'Lower_inv' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'linv_label0' (Inversion_LUP1/inverse.cpp:148:3) in function 'Lower_inv'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 296.969 ; gain = 206.590
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inverse_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'linv_label2'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 10.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.902 seconds; current allocated memory: 240.343 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.369 seconds; current allocated memory: 240.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'uinv_label10'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('U_inv_addr_4_write_ln188', Inversion_LUP1/inverse.cpp:188) of constant 0 on array 'U_inv' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'U_inv'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'uinv_label20'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 17.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+INFO: [SCHED 204-61] Pipelining loop 'univ_label32'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 10.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.603 seconds; current allocated memory: 241.072 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.345 seconds; current allocated memory: 241.464 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PermutMat_Initialize'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+INFO: [SCHED 204-61] Pipelining loop 'find_max'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: find_max): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'and' operation ('and_ln54_4', Inversion_LUP1/inverse.cpp:54->Inversion_LUP1/inverse.cpp:257) and 'fcmp' operation ('tmp_25', Inversion_LUP1/inverse.cpp:54->Inversion_LUP1/inverse.cpp:257).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
+INFO: [SCHED 204-61] Pipelining loop 'lup_label2'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257) on array 'A'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257) on array 'A'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257) on array 'A'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257) on array 'A'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:257) on array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 11.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('A_inv_addr_2_write_ln265', Inversion_LUP1/inverse.cpp:265) of constant 0 on array 'A_inv' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A_inv'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Assign_L1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Assign_U1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'MM_L1_MM_L2'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('U_inv_load_2', Inversion_LUP1/inverse.cpp:228->Inversion_LUP1/inverse.cpp:273) on array 'U_inv' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'U_inv'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 21.
+INFO: [SCHED 204-61] Pipelining loop 'L1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('UL_inv_load_2', Inversion_LUP1/inverse.cpp:245->Inversion_LUP1/inverse.cpp:274) on array 'UL_inv', Inversion_LUP1/inverse.cpp:253 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'UL_inv'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.231 seconds; current allocated memory: 242.983 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.411 seconds; current allocated memory: 244.973 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fadd_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fadd_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'inverse_top_fmul_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fdiv_32ns_32ns_32_16_1' to 'inverse_top_fdiv_dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Lower_inv'.
+INFO: [HLS 200-111]  Elapsed time: 1.058 seconds; current allocated memory: 245.872 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Upper_inv'.
+INFO: [HLS 200-111]  Elapsed time: 0.652 seconds; current allocated memory: 246.907 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A_inv' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inverse_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'inverse_top_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_faddfeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_sitofp_32ns_32_6_1' to 'inverse_top_sitoffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fcmp_32ns_32ns_1_2_1' to 'inverse_top_fcmp_g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_mux_42_32_1_1' to 'inverse_top_mux_4hbi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_faddfeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fcmp_g8j': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_mux_4hbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_sitoffYi': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inverse_top'.
+INFO: [HLS 200-111]  Elapsed time: 1.163 seconds; current allocated memory: 250.677 MB.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_L_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_U_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_L_inv_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_U_inv_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 331.016 ; gain = 240.637
+INFO: [VHDL 208-304] Generating VHDL RTL for inverse_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for inverse_top.
+INFO: [HLS 200-112] Total elapsed time: 28.902 seconds; peak allocated memory: 250.677 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Inversion_LUP1/inverse.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 185.168 ; gain = 94.934
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 185.168 ; gain = 94.934
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'lup' into 'inverse_top' (Inversion_LUP1/inverse.cpp:258).
+INFO: [XFORM 203-603] Inlining function 'matrix_mult' into 'inverse_top' (Inversion_LUP1/inverse.cpp:274).
+INFO: [XFORM 203-603] Inlining function 'final_perm' into 'inverse_top' (Inversion_LUP1/inverse.cpp:275).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 187.629 ; gain = 97.395
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'inverse_top' (Inversion_LUP1/inverse.cpp:246->Inversion_LUP1/inverse.cpp:275) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 217.227 ; gain = 126.992
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'lup_label0' (Inversion_LUP1/inverse.cpp:37) in function 'inverse_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-5' (Inversion_LUP1/inverse.cpp:262) in function 'inverse_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'MM_L2' (Inversion_LUP1/inverse.cpp:224) in function 'inverse_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'L1' (Inversion_LUP1/inverse.cpp:242) in function 'inverse_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'uinv_label10' (Inversion_LUP1/inverse.cpp:184) in function 'Upper_inv' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'univ_label31' (Inversion_LUP1/inverse.cpp:201) in function 'Upper_inv' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 2 for loop 'univ_label31' (Inversion_LUP1/inverse.cpp:203:1) in function 'Upper_inv'.
+WARNING: [XFORM 203-503] Cannot unroll loop 'find_max' (Inversion_LUP1/inverse.cpp:50) in function 'inverse_top' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'swap_row' (Inversion_LUP1/inverse.cpp:72) in function 'inverse_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (Inversion_LUP1/inverse.cpp:81) in function 'inverse_top' completely with a factor of 3.
+WARNING: [XFORM 203-503] Cannot unroll loop 'lup_label1' (Inversion_LUP1/inverse.cpp:97) in function 'inverse_top' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'lup_label2' (Inversion_LUP1/inverse.cpp:101) in function 'inverse_top' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5.1' (Inversion_LUP1/inverse.cpp:265) in function 'inverse_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'MM_L3' (Inversion_LUP1/inverse.cpp:228) in function 'inverse_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'L2' (Inversion_LUP1/inverse.cpp:245) in function 'inverse_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'uinv_label11' (Inversion_LUP1/inverse.cpp:187) in function 'Upper_inv' completely with a factor of 3.
+WARNING: [XFORM 203-503] Cannot unroll loop 'univ_label32' (Inversion_LUP1/inverse.cpp:206) in function 'Upper_inv' completely: variable loop bound.
+INFO: [XFORM 203-102] Automatically partitioning small array 'P' (Inversion_LUP1/inverse.cpp:255) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'L_inv'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'P' (Inversion_LUP1/inverse.cpp:255) in dimension 1 completely.
+INFO: [XFORM 203-102] Automatically partitioning small array 'L_inv.0' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'L_inv.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'L_inv.2' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'L_inv.0' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'L_inv.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'L_inv.2' in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'inverse_top' (Inversion_LUP1/inverse.cpp:246->Inversion_LUP1/inverse.cpp:275) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Inversion_LUP1/inverse.cpp:74:27) to (Inversion_LUP1/inverse.cpp:90:5) in function 'inverse_top'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Inversion_LUP1/inverse.cpp:165:2) to (Inversion_LUP1/inverse.cpp:159:42) in function 'Lower_inv'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 276.902 ; gain = 186.668
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'lup_label1' (Inversion_LUP1/inverse.cpp:97:4) in function 'inverse_top' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'lup_label0' (Inversion_LUP1/inverse.cpp:37:3) in function 'inverse_top' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Assign_L0' (Inversion_LUP1/inverse.cpp:110:3) in function 'inverse_top' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Assign_U0' (Inversion_LUP1/inverse.cpp:124:3) in function 'inverse_top' : 
+
+the outer loop is not a perfect loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'MM_L1' (Inversion_LUP1/inverse.cpp:222:3) in function 'inverse_top'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'univ_label31' (Inversion_LUP1/inverse.cpp:201:4) in function 'Upper_inv' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'univ_label30' (Inversion_LUP1/inverse.cpp:199:3) in function 'Upper_inv' : 
+
+the outer loop is not a perfect loop because either the parent loop or the sub loop has no invariant trip count.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'linv_label1' (Inversion_LUP1/inverse.cpp:150:4) in function 'Lower_inv' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'linv_label0' (Inversion_LUP1/inverse.cpp:148:3) in function 'Lower_inv'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 297.703 ; gain = 207.469
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inverse_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'linv_label2'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:166).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 10.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 29.877 seconds; current allocated memory: 241.057 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.528 seconds; current allocated memory: 241.566 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'uinv_label10'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('U_inv_addr_4_write_ln188', Inversion_LUP1/inverse.cpp:188) of constant 0 on array 'U_inv' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'U_inv'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'uinv_label20'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 17.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+INFO: [SCHED 204-61] Pipelining loop 'univ_label32'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209) and 'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:209).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 10.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.057 seconds; current allocated memory: 241.970 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.569 seconds; current allocated memory: 242.362 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PermutMat_Initialize'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+INFO: [SCHED 204-61] Pipelining loop 'find_max'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: find_max): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'and' operation ('and_ln54_4', Inversion_LUP1/inverse.cpp:54->Inversion_LUP1/inverse.cpp:258) and 'fcmp' operation ('tmp_24', Inversion_LUP1/inverse.cpp:54->Inversion_LUP1/inverse.cpp:258).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
+INFO: [SCHED 204-61] Pipelining loop 'lup_label2'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258) on array 'A'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258) on array 'A'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258) on array 'A'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258) on array 'A'.
+WARNING: [SCHED 204-68] The II Violation in module 'inverse_top' (Loop: lup_label2): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1)
+   between 'store' operation ('A_addr_12_write_ln104', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258) of variable 'tmp_12', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258 on array 'A' and 'load' operation ('A_load_8', Inversion_LUP1/inverse.cpp:104->Inversion_LUP1/inverse.cpp:258) on array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 11.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('A_inv_addr_2_write_ln266', Inversion_LUP1/inverse.cpp:266) of constant 0 on array 'A_inv' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A_inv'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Assign_L1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Assign_U1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'MM_L1_MM_L2'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('U_inv_load_2', Inversion_LUP1/inverse.cpp:229->Inversion_LUP1/inverse.cpp:274) on array 'U_inv' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'U_inv'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 21.
+INFO: [SCHED 204-61] Pipelining loop 'L1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('UL_inv_load_2', Inversion_LUP1/inverse.cpp:246->Inversion_LUP1/inverse.cpp:275) on array 'UL_inv', Inversion_LUP1/inverse.cpp:254 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'UL_inv'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.286 seconds; current allocated memory: 243.872 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.879 seconds; current allocated memory: 245.921 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fadd_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fadd_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'inverse_top_fmul_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fdiv_32ns_32ns_32_16_1' to 'inverse_top_fdiv_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_mux_32_32_1_1' to 'inverse_top_mux_3eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_mux_3eOg': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Lower_inv'.
+INFO: [HLS 200-111]  Elapsed time: 1.92 seconds; current allocated memory: 247.348 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Upper_inv'.
+INFO: [HLS 200-111]  Elapsed time: 1.31 seconds; current allocated memory: 248.518 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A_inv' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inverse_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'inverse_top_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_faddffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_sitofp_32ns_32_6_1' to 'inverse_top_sitofg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fcmp_32ns_32ns_1_2_1' to 'inverse_top_fcmp_hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_mux_42_32_1_1' to 'inverse_top_mux_4ibs' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_faddffYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fcmp_hbi': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_mux_3eOg': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_mux_4ibs': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_sitofg8j': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inverse_top'.
+INFO: [HLS 200-111]  Elapsed time: 1.72 seconds; current allocated memory: 252.453 MB.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_L_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_U_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_U_inv_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_UL_inv_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:51 . Memory (MB): peak = 335.070 ; gain = 244.836
+INFO: [VHDL 208-304] Generating VHDL RTL for inverse_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for inverse_top.
+INFO: [HLS 200-112] Total elapsed time: 51.067 seconds; peak allocated memory: 252.453 MB.

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="inverse.cpp" path="D:\HLS_Projects\Inversion_LUP1\inverse.cpp"/>
+    <originFiles name="inverse.h" path="D:\HLS_Projects\Inversion_LUP1\inverse.h"/>
+  </source>
+  <testbench>
+    <originFiles name="inverse_test.cpp" path="D:\HLS_Projects\Inversion_LUP1\inverse_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
