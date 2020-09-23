@@ -1,0 +1,106 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'MatrixMult_HLS/mmult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 183.672 ; gain = 93.484
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 183.672 ; gain = 93.484
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 183.672 ; gain = 93.484
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 183.672 ; gain = 93.484
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (MatrixMult_HLS/mmult.cpp:7) in function 'matrixmult' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (MatrixMult_HLS/mmult.cpp:11) in function 'matrixmult' completely with a factor of 4.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 183.672 ; gain = 93.484
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (MatrixMult_HLS/mmult.cpp:5:13) in function 'matrixmult'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 183.672 ; gain = 93.484
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load_2', MatrixMult_HLS/mmult.cpp:12) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 26.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.239 seconds; current allocated memory: 100.984 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.312 seconds; current allocated memory: 101.336 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmult/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmult/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmult/res' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixmult' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrixmult_fadd_32ns_32ns_32_5_full_dsp_1' to 'matrixmult_fadd_3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmult_fmul_32ns_32ns_32_4_max_dsp_1' to 'matrixmult_fmul_3cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrixmult_fadd_3bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrixmult_fmul_3cud': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmult'.
+INFO: [HLS 200-111]  Elapsed time: 0.543 seconds; current allocated memory: 102.079 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:21 . Memory (MB): peak = 183.672 ; gain = 93.484
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixmult.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixmult.
+INFO: [HLS 200-112] Total elapsed time: 21.438 seconds; peak allocated memory: 102.079 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'MatrixMult_HLS/mmult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.406 ; gain = 93.285
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.406 ; gain = 93.285
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.406 ; gain = 93.285
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.406 ; gain = 93.285
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (MatrixMult_HLS/mmult.cpp:7) in function 'matrixmult' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (MatrixMult_HLS/mmult.cpp:11) in function 'matrixmult' completely with a factor of 4.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.406 ; gain = 93.285
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (MatrixMult_HLS/mmult.cpp:5:13) in function 'matrixmult'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.406 ; gain = 93.285
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load_2', MatrixMult_HLS/mmult.cpp:12) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 26.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 9.222 seconds; current allocated memory: 100.999 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 101.336 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmult/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmult/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmult/res' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixmult' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrixmult_fadd_32ns_32ns_32_5_full_dsp_1' to 'matrixmult_fadd_3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmult_fmul_32ns_32ns_32_4_max_dsp_1' to 'matrixmult_fmul_3cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrixmult_fadd_3bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrixmult_fmul_3cud': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmult'.
+INFO: [HLS 200-111]  Elapsed time: 0.386 seconds; current allocated memory: 102.094 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 184.406 ; gain = 93.285
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixmult.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixmult.
+INFO: [HLS 200-112] Total elapsed time: 12.094 seconds; peak allocated memory: 102.094 MB.

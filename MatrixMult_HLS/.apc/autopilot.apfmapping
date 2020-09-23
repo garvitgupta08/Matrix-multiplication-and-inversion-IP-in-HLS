@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="mmult.h" path="D:\HLS_Projects\MatrixMult_HLS\mmult.h"/>
+    <originFiles name="mmult.cpp" path="D:\HLS_Projects\MatrixMult_HLS\mmult.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="mmult_test.cpp" path="D:\HLS_Projects\MatrixMult_HLS\mmult_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

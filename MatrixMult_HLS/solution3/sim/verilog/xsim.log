@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Aug 15 00:21:56 2020
+# Process ID: 5964
+# Current directory: D:/HLS_Projects/MatrixMult_HLS/solution3/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/matrixmult/xsim_script.tcl}
+# Log file: D:/HLS_Projects/MatrixMult_HLS/solution3/sim/verilog/xsim.log
+# Journal file: D:/HLS_Projects/MatrixMult_HLS/solution3/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/matrixmult/xsim_script.tcl
+# xsim {matrixmult} -autoloadwcfg -tclbatch {matrixmult.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source matrixmult.tcl
+## run all
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_matrixmult_top/AESL_inst_matrixmult/matrixmult_fadd_3bkb_U4/matrixmult_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: D:\Xilinx\Vivado\2019.1\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_matrixmult_top/AESL_inst_matrixmult/matrixmult_fadd_3bkb_U3/matrixmult_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: D:\Xilinx\Vivado\2019.1\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_matrixmult_top/AESL_inst_matrixmult/matrixmult_fadd_3bkb_U2/matrixmult_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: D:\Xilinx\Vivado\2019.1\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "565000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 605 ns : File "D:/HLS_Projects/MatrixMult_HLS/solution3/sim/verilog/matrixmult.autotb.v" Line 454
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Aug 15 00:22:13 2020...

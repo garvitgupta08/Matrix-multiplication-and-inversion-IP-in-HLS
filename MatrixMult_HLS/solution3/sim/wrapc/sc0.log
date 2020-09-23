@@ -1,0 +1,5 @@
+   Build using "D:/Xilinx/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling mmult.cpp_pre.cpp.tb.cpp
+   Compiling apatb_matrixmult.cpp
+   Compiling mmult_test.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

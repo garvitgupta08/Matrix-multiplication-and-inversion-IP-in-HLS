@@ -1,0 +1,654 @@
+
+
+================================================================
+== Vivado HLS Report for 'Upper_inv'
+================================================================
+* Date:           Sat Aug 15 11:40:41 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        Inversion_LUP1
+* Solution:       No_directive
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.397|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  159|  363|  159|  363|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+-----+-----+----------+-----------+-----------+-------+----------+
+        |                   |  Latency  | Iteration|  Initiation Interval  |  Trip |          |
+        |     Loop Name     | min | max |  Latency |  achieved |   target  | Count | Pipelined|
+        +-------------------+-----+-----+----------+-----------+-----------+-------+----------+
+        |- uinv_label10     |   15|   15|         5|          -|          -|      3|    no    |
+        | + uinv_label11    |    3|    3|         1|          -|          -|      3|    no    |
+        |- uinv_label20     |   51|   51|        17|          -|          -|      3|    no    |
+        |- univ_label30     |   90|  294|  30 ~ 98 |          -|          -|      3|    no    |
+        | + univ_label31    |   28|   96|  28 ~ 48 |          -|          -| 1 ~ 2 |    no    |
+        |  ++ univ_label32  |   10|   30|        10|          -|          -| 1 ~ 3 |    no    |
+        +-------------------+-----+-----+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 48
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 4 
+3 --> 3 2 
+4 --> 5 21 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 4 
+21 --> 22 
+22 --> 23 21 
+23 --> 24 33 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 23 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 22 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 49 [1/1] (1.76ns)   --->   "br label %1" [Inversion_LUP1/inverse.cpp:174]   --->   Operation 49 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.76>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%i_0 = phi i2 [ 0, %0 ], [ %i_4, %uinv_label10_end ]"   --->   Operation 50 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.95ns)   --->   "%icmp_ln174 = icmp eq i2 %i_0, -1" [Inversion_LUP1/inverse.cpp:174]   --->   Operation 51 'icmp' 'icmp_ln174' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 52 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (1.56ns)   --->   "%i_4 = add i2 %i_0, 1" [Inversion_LUP1/inverse.cpp:174]   --->   Operation 53 'add' 'i_4' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "br i1 %icmp_ln174, label %.preheader2.preheader, label %uinv_label10_begin" [Inversion_LUP1/inverse.cpp:174]   --->   Operation 54 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str14) nounwind" [Inversion_LUP1/inverse.cpp:175]   --->   Operation 55 'specloopname' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_21 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str14)" [Inversion_LUP1/inverse.cpp:175]   --->   Operation 56 'specregionbegin' 'tmp_21' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%zext_ln178 = zext i2 %i_0 to i5" [Inversion_LUP1/inverse.cpp:178]   --->   Operation 57 'zext' 'zext_ln178' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_33 = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %i_0, i2 0)" [Inversion_LUP1/inverse.cpp:178]   --->   Operation 58 'bitconcatenate' 'tmp_33' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%zext_ln178_1 = zext i4 %tmp_33 to i5" [Inversion_LUP1/inverse.cpp:178]   --->   Operation 59 'zext' 'zext_ln178_1' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (1.73ns)   --->   "%sub_ln178 = sub i5 %zext_ln178_1, %zext_ln178" [Inversion_LUP1/inverse.cpp:178]   --->   Operation 60 'sub' 'sub_ln178' <Predicate = (!icmp_ln174)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 61 [1/1] (1.76ns)   --->   "br label %2" [Inversion_LUP1/inverse.cpp:176]   --->   Operation 61 'br' <Predicate = (!icmp_ln174)> <Delay = 1.76>
+ST_2 : Operation 62 [1/1] (1.76ns)   --->   "br label %.preheader2" [Inversion_LUP1/inverse.cpp:182]   --->   Operation 62 'br' <Predicate = (icmp_ln174)> <Delay = 1.76>
+
+State 3 <SV = 2> <Delay = 4.10>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%j_0 = phi i2 [ 0, %uinv_label10_begin ], [ %j, %3 ]"   --->   Operation 63 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.95ns)   --->   "%icmp_ln176 = icmp eq i2 %j_0, -1" [Inversion_LUP1/inverse.cpp:176]   --->   Operation 64 'icmp' 'icmp_ln176' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 65 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (1.56ns)   --->   "%j = add i2 %j_0, 1" [Inversion_LUP1/inverse.cpp:176]   --->   Operation 66 'add' 'j' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "br i1 %icmp_ln176, label %uinv_label10_end, label %3" [Inversion_LUP1/inverse.cpp:176]   --->   Operation 67 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str15) nounwind" [Inversion_LUP1/inverse.cpp:177]   --->   Operation 68 'specloopname' <Predicate = (!icmp_ln176)> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%zext_ln178_2 = zext i2 %j_0 to i5" [Inversion_LUP1/inverse.cpp:178]   --->   Operation 69 'zext' 'zext_ln178_2' <Predicate = (!icmp_ln176)> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (1.78ns)   --->   "%add_ln178 = add i5 %sub_ln178, %zext_ln178_2" [Inversion_LUP1/inverse.cpp:178]   --->   Operation 70 'add' 'add_ln178' <Predicate = (!icmp_ln176)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%sext_ln178 = sext i5 %add_ln178 to i64" [Inversion_LUP1/inverse.cpp:178]   --->   Operation 71 'sext' 'sext_ln178' <Predicate = (!icmp_ln176)> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%U_inv_addr_1 = getelementptr [9 x float]* %U_inv, i64 0, i64 %sext_ln178" [Inversion_LUP1/inverse.cpp:178]   --->   Operation 72 'getelementptr' 'U_inv_addr_1' <Predicate = (!icmp_ln176)> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (2.32ns)   --->   "store float 0.000000e+00, float* %U_inv_addr_1, align 4" [Inversion_LUP1/inverse.cpp:178]   --->   Operation 73 'store' <Predicate = (!icmp_ln176)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "br label %2" [Inversion_LUP1/inverse.cpp:176]   --->   Operation 74 'br' <Predicate = (!icmp_ln176)> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str14, i32 %tmp_21)" [Inversion_LUP1/inverse.cpp:180]   --->   Operation 75 'specregionend' 'empty' <Predicate = (icmp_ln176)> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "br label %1" [Inversion_LUP1/inverse.cpp:174]   --->   Operation 76 'br' <Predicate = (icmp_ln176)> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 2.32>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%i1_0 = phi i2 [ %i, %4 ], [ 0, %.preheader2.preheader ]"   --->   Operation 77 'phi' 'i1_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (0.95ns)   --->   "%icmp_ln182 = icmp eq i2 %i1_0, -1" [Inversion_LUP1/inverse.cpp:182]   --->   Operation 78 'icmp' 'icmp_ln182' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 79 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 80 [1/1] (1.56ns)   --->   "%i = add i2 %i1_0, 1" [Inversion_LUP1/inverse.cpp:182]   --->   Operation 80 'add' 'i' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "br i1 %icmp_ln182, label %.preheader.preheader, label %4" [Inversion_LUP1/inverse.cpp:182]   --->   Operation 81 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_34 = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %i1_0, i2 0)" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 82 'bitconcatenate' 'tmp_34' <Predicate = (!icmp_ln182)> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%zext_ln184 = zext i4 %tmp_34 to i64" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 83 'zext' 'zext_ln184' <Predicate = (!icmp_ln182)> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (0.00ns)   --->   "%U_addr = getelementptr [9 x float]* %U, i64 0, i64 %zext_ln184" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 84 'getelementptr' 'U_addr' <Predicate = (!icmp_ln182)> <Delay = 0.00>
+ST_4 : Operation 85 [2/2] (2.32ns)   --->   "%U_load = load float* %U_addr, align 4" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 85 'load' 'U_load' <Predicate = (!icmp_ln182)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 86 [1/1] (1.76ns)   --->   "br label %.preheader" [Inversion_LUP1/inverse.cpp:187]   --->   Operation 86 'br' <Predicate = (icmp_ln182)> <Delay = 1.76>
+
+State 5 <SV = 3> <Delay = 8.39>
+ST_5 : Operation 87 [1/2] (2.32ns)   --->   "%U_load = load float* %U_addr, align 4" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 87 'load' 'U_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_5 : Operation 88 [16/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 88 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 4> <Delay = 6.07>
+ST_6 : Operation 89 [15/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 89 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 5> <Delay = 6.07>
+ST_7 : Operation 90 [14/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 90 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 6> <Delay = 6.07>
+ST_8 : Operation 91 [13/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 91 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 7> <Delay = 6.07>
+ST_9 : Operation 92 [12/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 92 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 8> <Delay = 6.07>
+ST_10 : Operation 93 [11/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 93 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 9> <Delay = 6.07>
+ST_11 : Operation 94 [10/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 94 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 10> <Delay = 6.07>
+ST_12 : Operation 95 [9/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 95 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 11> <Delay = 6.07>
+ST_13 : Operation 96 [8/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 96 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 12> <Delay = 6.07>
+ST_14 : Operation 97 [7/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 97 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 13> <Delay = 6.07>
+ST_15 : Operation 98 [6/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 98 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 14> <Delay = 6.07>
+ST_16 : Operation 99 [5/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 99 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 15> <Delay = 6.07>
+ST_17 : Operation 100 [4/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 100 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 16> <Delay = 6.07>
+ST_18 : Operation 101 [3/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 101 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 17> <Delay = 6.07>
+ST_19 : Operation 102 [2/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 102 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 18> <Delay = 8.39>
+ST_20 : Operation 103 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str16) nounwind" [Inversion_LUP1/inverse.cpp:183]   --->   Operation 103 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 104 [1/1] (0.00ns)   --->   "%U_inv_addr = getelementptr [9 x float]* %U_inv, i64 0, i64 %zext_ln184" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 104 'getelementptr' 'U_inv_addr' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 105 [1/16] (6.07ns)   --->   "%tmp = fdiv float 1.000000e+00, %U_load" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 105 'fdiv' 'tmp' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 106 [1/1] (2.32ns)   --->   "store float %tmp, float* %U_inv_addr, align 4" [Inversion_LUP1/inverse.cpp:184]   --->   Operation 106 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_20 : Operation 107 [1/1] (0.00ns)   --->   "br label %.preheader2" [Inversion_LUP1/inverse.cpp:182]   --->   Operation 107 'br' <Predicate = true> <Delay = 0.00>
+
+State 21 <SV = 3> <Delay = 1.76>
+ST_21 : Operation 108 [1/1] (0.00ns)   --->   "%indvars_iv = phi i2 [ %i_5, %univ_label30_end ], [ 0, %.preheader.preheader ]"   --->   Operation 108 'phi' 'indvars_iv' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 109 [1/1] (0.00ns)   --->   "%zext_ln187 = zext i2 %indvars_iv to i32" [Inversion_LUP1/inverse.cpp:187]   --->   Operation 109 'zext' 'zext_ln187' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 110 [1/1] (0.95ns)   --->   "%icmp_ln187 = icmp eq i2 %indvars_iv, -1" [Inversion_LUP1/inverse.cpp:187]   --->   Operation 110 'icmp' 'icmp_ln187' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 111 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 111 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 112 [1/1] (1.56ns)   --->   "%i_5 = add i2 %indvars_iv, 1" [Inversion_LUP1/inverse.cpp:187]   --->   Operation 112 'add' 'i_5' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 113 [1/1] (0.00ns)   --->   "br i1 %icmp_ln187, label %7, label %univ_label30_begin" [Inversion_LUP1/inverse.cpp:187]   --->   Operation 113 'br' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 114 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str17) nounwind" [Inversion_LUP1/inverse.cpp:188]   --->   Operation 114 'specloopname' <Predicate = (!icmp_ln187)> <Delay = 0.00>
+ST_21 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_22 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str17)" [Inversion_LUP1/inverse.cpp:188]   --->   Operation 115 'specregionbegin' 'tmp_22' <Predicate = (!icmp_ln187)> <Delay = 0.00>
+ST_21 : Operation 116 [1/1] (0.00ns)   --->   "%zext_ln198_1 = zext i2 %indvars_iv to i5" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 116 'zext' 'zext_ln198_1' <Predicate = (!icmp_ln187)> <Delay = 0.00>
+ST_21 : Operation 117 [1/1] (0.00ns)   --->   "%tmp_35 = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %indvars_iv, i2 0)" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 117 'bitconcatenate' 'tmp_35' <Predicate = (!icmp_ln187)> <Delay = 0.00>
+ST_21 : Operation 118 [1/1] (0.00ns)   --->   "%zext_ln198 = zext i4 %tmp_35 to i64" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 118 'zext' 'zext_ln198' <Predicate = (!icmp_ln187)> <Delay = 0.00>
+ST_21 : Operation 119 [1/1] (0.00ns)   --->   "%U_addr_1 = getelementptr [9 x float]* %U, i64 0, i64 %zext_ln198" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 119 'getelementptr' 'U_addr_1' <Predicate = (!icmp_ln187)> <Delay = 0.00>
+ST_21 : Operation 120 [1/1] (1.76ns)   --->   "br label %5" [Inversion_LUP1/inverse.cpp:189]   --->   Operation 120 'br' <Predicate = (!icmp_ln187)> <Delay = 1.76>
+ST_21 : Operation 121 [1/1] (0.00ns)   --->   "ret void" [Inversion_LUP1/inverse.cpp:201]   --->   Operation 121 'ret' <Predicate = (icmp_ln187)> <Delay = 0.00>
+
+State 22 <SV = 4> <Delay = 3.51>
+ST_22 : Operation 122 [1/1] (0.00ns)   --->   "%k = phi i2 [ 0, %univ_label30_begin ], [ %j_5, %univ_label31_end ]"   --->   Operation 122 'phi' 'k' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 123 [1/1] (0.00ns)   --->   "%zext_ln189 = zext i2 %k to i32" [Inversion_LUP1/inverse.cpp:189]   --->   Operation 123 'zext' 'zext_ln189' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 124 [1/1] (0.95ns)   --->   "%icmp_ln189 = icmp eq i2 %k, %indvars_iv" [Inversion_LUP1/inverse.cpp:189]   --->   Operation 124 'icmp' 'icmp_ln189' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 125 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 2, i64 2)"   --->   Operation 125 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 126 [1/1] (1.56ns)   --->   "%j_5 = add i2 %k, 1" [Inversion_LUP1/inverse.cpp:189]   --->   Operation 126 'add' 'j_5' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 127 [1/1] (0.00ns)   --->   "br i1 %icmp_ln189, label %univ_label30_end, label %univ_label31_begin" [Inversion_LUP1/inverse.cpp:189]   --->   Operation 127 'br' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 128 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str18) nounwind" [Inversion_LUP1/inverse.cpp:190]   --->   Operation 128 'specloopname' <Predicate = (!icmp_ln189)> <Delay = 0.00>
+ST_22 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_23 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str18)" [Inversion_LUP1/inverse.cpp:190]   --->   Operation 129 'specregionbegin' 'tmp_23' <Predicate = (!icmp_ln189)> <Delay = 0.00>
+ST_22 : Operation 130 [1/1] (0.00ns)   --->   "%zext_ln196 = zext i2 %k to i5" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 130 'zext' 'zext_ln196' <Predicate = (!icmp_ln189)> <Delay = 0.00>
+ST_22 : Operation 131 [1/1] (0.00ns)   --->   "%tmp_36 = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %k, i2 0)" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 131 'bitconcatenate' 'tmp_36' <Predicate = (!icmp_ln189)> <Delay = 0.00>
+ST_22 : Operation 132 [1/1] (0.00ns)   --->   "%zext_ln196_1 = zext i4 %tmp_36 to i5" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 132 'zext' 'zext_ln196_1' <Predicate = (!icmp_ln189)> <Delay = 0.00>
+ST_22 : Operation 133 [1/1] (1.73ns)   --->   "%sub_ln196 = sub i5 %zext_ln196_1, %zext_ln196" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 133 'sub' 'sub_ln196' <Predicate = (!icmp_ln189)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 134 [1/1] (1.78ns)   --->   "%add_ln198 = add i5 %sub_ln196, %zext_ln198_1" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 134 'add' 'add_ln198' <Predicate = (!icmp_ln189)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 135 [1/1] (0.00ns)   --->   "%sext_ln198 = sext i5 %add_ln198 to i64" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 135 'sext' 'sext_ln198' <Predicate = (!icmp_ln189)> <Delay = 0.00>
+ST_22 : Operation 136 [1/1] (0.00ns)   --->   "%U_inv_addr_3 = getelementptr [9 x float]* %U_inv, i64 0, i64 %sext_ln198" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 136 'getelementptr' 'U_inv_addr_3' <Predicate = (!icmp_ln189)> <Delay = 0.00>
+ST_22 : Operation 137 [1/1] (1.76ns)   --->   "br label %6" [Inversion_LUP1/inverse.cpp:193]   --->   Operation 137 'br' <Predicate = (!icmp_ln189)> <Delay = 1.76>
+ST_22 : Operation 138 [1/1] (0.00ns)   --->   "%empty_40 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str17, i32 %tmp_22)" [Inversion_LUP1/inverse.cpp:200]   --->   Operation 138 'specregionend' 'empty_40' <Predicate = (icmp_ln189)> <Delay = 0.00>
+ST_22 : Operation 139 [1/1] (0.00ns)   --->   "br label %.preheader" [Inversion_LUP1/inverse.cpp:187]   --->   Operation 139 'br' <Predicate = (icmp_ln189)> <Delay = 0.00>
+
+State 23 <SV = 5> <Delay = 5.72>
+ST_23 : Operation 140 [1/1] (0.00ns)   --->   "%sum_0 = phi float [ 0.000000e+00, %univ_label31_begin ], [ %sum, %univ_label32 ]"   --->   Operation 140 'phi' 'sum_0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 141 [1/1] (0.00ns)   --->   "%k_0 = phi i32 [ %zext_ln189, %univ_label31_begin ], [ %k_4, %univ_label32 ]"   --->   Operation 141 'phi' 'k_0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 142 [1/1] (2.47ns)   --->   "%icmp_ln193 = icmp slt i32 %k_0, %zext_ln187" [Inversion_LUP1/inverse.cpp:193]   --->   Operation 142 'icmp' 'icmp_ln193' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 143 [1/1] (0.00ns)   --->   "br i1 %icmp_ln193, label %univ_label32, label %univ_label31_end" [Inversion_LUP1/inverse.cpp:193]   --->   Operation 143 'br' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 144 [1/1] (0.00ns)   --->   "%trunc_ln196 = trunc i32 %k_0 to i5" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 144 'trunc' 'trunc_ln196' <Predicate = (icmp_ln193)> <Delay = 0.00>
+ST_23 : Operation 145 [1/1] (0.00ns)   --->   "%trunc_ln196_1 = trunc i32 %k_0 to i3" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 145 'trunc' 'trunc_ln196_1' <Predicate = (icmp_ln193)> <Delay = 0.00>
+ST_23 : Operation 146 [1/1] (0.00ns)   --->   "%sext_ln196_1_cast = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %trunc_ln196_1, i2 0)" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 146 'bitconcatenate' 'sext_ln196_1_cast' <Predicate = (icmp_ln193)> <Delay = 0.00>
+ST_23 : Operation 147 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln196_1 = sub i5 %sext_ln196_1_cast, %trunc_ln196" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 147 'sub' 'sub_ln196_1' <Predicate = (icmp_ln193)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.70> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_23 : Operation 148 [1/1] (3.40ns) (root node of TernaryAdder)   --->   "%add_ln196 = add i5 %zext_ln198_1, %sub_ln196_1" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 148 'add' 'add_ln196' <Predicate = (icmp_ln193)> <Delay = 3.40> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.70> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_23 : Operation 149 [1/1] (0.00ns)   --->   "%sext_ln196 = sext i5 %add_ln196 to i64" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 149 'sext' 'sext_ln196' <Predicate = (icmp_ln193)> <Delay = 0.00>
+ST_23 : Operation 150 [1/1] (0.00ns)   --->   "%U_addr_2 = getelementptr [9 x float]* %U, i64 0, i64 %sext_ln196" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 150 'getelementptr' 'U_addr_2' <Predicate = (icmp_ln193)> <Delay = 0.00>
+ST_23 : Operation 151 [1/1] (1.78ns)   --->   "%add_ln196_1 = add i5 %trunc_ln196, %sub_ln196" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 151 'add' 'add_ln196_1' <Predicate = (icmp_ln193)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 152 [1/1] (0.00ns)   --->   "%sext_ln196_1 = sext i5 %add_ln196_1 to i64" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 152 'sext' 'sext_ln196_1' <Predicate = (icmp_ln193)> <Delay = 0.00>
+ST_23 : Operation 153 [1/1] (0.00ns)   --->   "%U_inv_addr_2 = getelementptr [9 x float]* %U_inv, i64 0, i64 %sext_ln196_1" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 153 'getelementptr' 'U_inv_addr_2' <Predicate = (icmp_ln193)> <Delay = 0.00>
+ST_23 : Operation 154 [2/2] (2.32ns)   --->   "%U_load_1 = load float* %U_addr_2, align 4" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 154 'load' 'U_load_1' <Predicate = (icmp_ln193)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_23 : Operation 155 [2/2] (2.32ns)   --->   "%U_inv_load = load float* %U_inv_addr_2, align 4" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 155 'load' 'U_inv_load' <Predicate = (icmp_ln193)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_23 : Operation 156 [1/1] (2.55ns)   --->   "%k_4 = add nsw i32 1, %k_0" [Inversion_LUP1/inverse.cpp:193]   --->   Operation 156 'add' 'k_4' <Predicate = (icmp_ln193)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 157 [2/2] (2.32ns)   --->   "%U_load_2 = load float* %U_addr_1, align 4" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 157 'load' 'U_load_2' <Predicate = (!icmp_ln193)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+
+State 24 <SV = 6> <Delay = 8.02>
+ST_24 : Operation 158 [1/2] (2.32ns)   --->   "%U_load_1 = load float* %U_addr_2, align 4" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 158 'load' 'U_load_1' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_24 : Operation 159 [1/2] (2.32ns)   --->   "%U_inv_load = load float* %U_inv_addr_2, align 4" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 159 'load' 'U_inv_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_24 : Operation 160 [4/4] (5.70ns)   --->   "%tmp_s = fmul float %U_load_1, %U_inv_load" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 160 'fmul' 'tmp_s' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 7> <Delay = 5.70>
+ST_25 : Operation 161 [3/4] (5.70ns)   --->   "%tmp_s = fmul float %U_load_1, %U_inv_load" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 161 'fmul' 'tmp_s' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 8> <Delay = 5.70>
+ST_26 : Operation 162 [2/4] (5.70ns)   --->   "%tmp_s = fmul float %U_load_1, %U_inv_load" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 162 'fmul' 'tmp_s' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 9> <Delay = 5.70>
+ST_27 : Operation 163 [1/4] (5.70ns)   --->   "%tmp_s = fmul float %U_load_1, %U_inv_load" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 163 'fmul' 'tmp_s' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 10> <Delay = 7.25>
+ST_28 : Operation 164 [5/5] (7.25ns)   --->   "%sum = fadd float %sum_0, %tmp_s" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 164 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 11> <Delay = 7.25>
+ST_29 : Operation 165 [4/5] (7.25ns)   --->   "%sum = fadd float %sum_0, %tmp_s" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 165 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 12> <Delay = 7.25>
+ST_30 : Operation 166 [3/5] (7.25ns)   --->   "%sum = fadd float %sum_0, %tmp_s" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 166 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 13> <Delay = 7.25>
+ST_31 : Operation 167 [2/5] (7.25ns)   --->   "%sum = fadd float %sum_0, %tmp_s" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 167 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 14> <Delay = 7.25>
+ST_32 : Operation 168 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str19) nounwind" [Inversion_LUP1/inverse.cpp:194]   --->   Operation 168 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 169 [1/1] (0.00ns)   --->   "%tmp_24 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str19)" [Inversion_LUP1/inverse.cpp:194]   --->   Operation 169 'specregionbegin' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 170 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 1, i32 3, i32 2, [1 x i8]* @p_str3) nounwind" [Inversion_LUP1/inverse.cpp:195]   --->   Operation 170 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 171 [1/5] (7.25ns)   --->   "%sum = fadd float %sum_0, %tmp_s" [Inversion_LUP1/inverse.cpp:196]   --->   Operation 171 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 172 [1/1] (0.00ns)   --->   "%empty_38 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str19, i32 %tmp_24)" [Inversion_LUP1/inverse.cpp:197]   --->   Operation 172 'specregionend' 'empty_38' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 173 [1/1] (0.00ns)   --->   "br label %6" [Inversion_LUP1/inverse.cpp:193]   --->   Operation 173 'br' <Predicate = true> <Delay = 0.00>
+
+State 33 <SV = 6> <Delay = 8.39>
+ST_33 : Operation 174 [1/1] (0.00ns)   --->   "%bitcast_ln198 = bitcast float %sum_0 to i32" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 174 'bitcast' 'bitcast_ln198' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 175 [1/1] (0.99ns)   --->   "%xor_ln198 = xor i32 %bitcast_ln198, -2147483648" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 175 'xor' 'xor_ln198' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 176 [1/1] (0.00ns)   --->   "%bitcast_ln198_1 = bitcast i32 %xor_ln198 to float" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 176 'bitcast' 'bitcast_ln198_1' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 177 [1/2] (2.32ns)   --->   "%U_load_2 = load float* %U_addr_1, align 4" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 177 'load' 'U_load_2' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_33 : Operation 178 [16/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 178 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 7> <Delay = 6.07>
+ST_34 : Operation 179 [15/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 179 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 8> <Delay = 6.07>
+ST_35 : Operation 180 [14/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 180 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 9> <Delay = 6.07>
+ST_36 : Operation 181 [13/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 181 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 10> <Delay = 6.07>
+ST_37 : Operation 182 [12/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 182 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 11> <Delay = 6.07>
+ST_38 : Operation 183 [11/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 183 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 12> <Delay = 6.07>
+ST_39 : Operation 184 [10/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 184 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 13> <Delay = 6.07>
+ST_40 : Operation 185 [9/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 185 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 14> <Delay = 6.07>
+ST_41 : Operation 186 [8/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 186 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 15> <Delay = 6.07>
+ST_42 : Operation 187 [7/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 187 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 16> <Delay = 6.07>
+ST_43 : Operation 188 [6/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 188 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 17> <Delay = 6.07>
+ST_44 : Operation 189 [5/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 189 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 18> <Delay = 6.07>
+ST_45 : Operation 190 [4/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 190 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 19> <Delay = 6.07>
+ST_46 : Operation 191 [3/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 191 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 20> <Delay = 6.07>
+ST_47 : Operation 192 [2/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 192 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 21> <Delay = 8.39>
+ST_48 : Operation 193 [1/16] (6.07ns)   --->   "%tmp_11 = fdiv float %bitcast_ln198_1, %U_load_2" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 193 'fdiv' 'tmp_11' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 194 [1/1] (2.32ns)   --->   "store float %tmp_11, float* %U_inv_addr_3, align 4" [Inversion_LUP1/inverse.cpp:198]   --->   Operation 194 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_48 : Operation 195 [1/1] (0.00ns)   --->   "%empty_39 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str18, i32 %tmp_23)" [Inversion_LUP1/inverse.cpp:199]   --->   Operation 195 'specregionend' 'empty_39' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 196 [1/1] (0.00ns)   --->   "br label %5" [Inversion_LUP1/inverse.cpp:189]   --->   Operation 196 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', Inversion_LUP1/inverse.cpp:174) [5]  (1.77 ns)
+
+ <State 2>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', Inversion_LUP1/inverse.cpp:176) [19]  (1.77 ns)
+
+ <State 3>: 4.1ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', Inversion_LUP1/inverse.cpp:176) [19]  (0 ns)
+	'add' operation ('add_ln178', Inversion_LUP1/inverse.cpp:178) [27]  (1.78 ns)
+	'getelementptr' operation ('U_inv_addr_1', Inversion_LUP1/inverse.cpp:178) [29]  (0 ns)
+	'store' operation ('store_ln178', Inversion_LUP1/inverse.cpp:178) of constant 0 on array 'U_inv' [30]  (2.32 ns)
+
+ <State 4>: 2.32ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', Inversion_LUP1/inverse.cpp:182) [38]  (0 ns)
+	'getelementptr' operation ('U_addr', Inversion_LUP1/inverse.cpp:184) [47]  (0 ns)
+	'load' operation ('U_load', Inversion_LUP1/inverse.cpp:184) on array 'U' [49]  (2.32 ns)
+
+ <State 5>: 8.4ns
+The critical path consists of the following:
+	'load' operation ('U_load', Inversion_LUP1/inverse.cpp:184) on array 'U' [49]  (2.32 ns)
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 6>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 7>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 8>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 9>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 10>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 11>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 12>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 13>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 14>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 15>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 16>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 17>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 18>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 19>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+
+ <State 20>: 8.4ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', Inversion_LUP1/inverse.cpp:184) [50]  (6.08 ns)
+	'store' operation ('store_ln184', Inversion_LUP1/inverse.cpp:184) of variable 'tmp', Inversion_LUP1/inverse.cpp:184 on array 'U_inv' [51]  (2.32 ns)
+
+ <State 21>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', Inversion_LUP1/inverse.cpp:189) [71]  (1.77 ns)
+
+ <State 22>: 3.52ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', Inversion_LUP1/inverse.cpp:189) [71]  (0 ns)
+	'sub' operation ('sub_ln196', Inversion_LUP1/inverse.cpp:196) [83]  (1.74 ns)
+	'add' operation ('add_ln198', Inversion_LUP1/inverse.cpp:198) [84]  (1.78 ns)
+
+ <State 23>: 5.73ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('zext_ln189', Inversion_LUP1/inverse.cpp:189) ('k', Inversion_LUP1/inverse.cpp:193) [90]  (0 ns)
+	'sub' operation ('sub_ln196_1', Inversion_LUP1/inverse.cpp:196) [100]  (0 ns)
+	'add' operation ('add_ln196', Inversion_LUP1/inverse.cpp:196) [101]  (3.4 ns)
+	'getelementptr' operation ('U_addr_2', Inversion_LUP1/inverse.cpp:196) [103]  (0 ns)
+	'load' operation ('U_load_1', Inversion_LUP1/inverse.cpp:196) on array 'U' [107]  (2.32 ns)
+
+ <State 24>: 8.02ns
+The critical path consists of the following:
+	'load' operation ('U_load_1', Inversion_LUP1/inverse.cpp:196) on array 'U' [107]  (2.32 ns)
+	'fmul' operation ('tmp_s', Inversion_LUP1/inverse.cpp:196) [109]  (5.7 ns)
+
+ <State 25>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', Inversion_LUP1/inverse.cpp:196) [109]  (5.7 ns)
+
+ <State 26>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', Inversion_LUP1/inverse.cpp:196) [109]  (5.7 ns)
+
+ <State 27>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', Inversion_LUP1/inverse.cpp:196) [109]  (5.7 ns)
+
+ <State 28>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:196) [110]  (7.26 ns)
+
+ <State 29>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:196) [110]  (7.26 ns)
+
+ <State 30>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:196) [110]  (7.26 ns)
+
+ <State 31>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:196) [110]  (7.26 ns)
+
+ <State 32>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', Inversion_LUP1/inverse.cpp:196) [110]  (7.26 ns)
+
+ <State 33>: 8.4ns
+The critical path consists of the following:
+	'load' operation ('U_load_2', Inversion_LUP1/inverse.cpp:198) on array 'U' [118]  (2.32 ns)
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 34>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 35>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 36>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 37>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 38>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 39>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 40>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 41>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 42>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 43>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 44>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 45>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 46>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 47>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+
+ <State 48>: 8.4ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', Inversion_LUP1/inverse.cpp:198) [119]  (6.08 ns)
+	'store' operation ('store_ln198', Inversion_LUP1/inverse.cpp:198) of variable 'tmp_11', Inversion_LUP1/inverse.cpp:198 on array 'U_inv' [120]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

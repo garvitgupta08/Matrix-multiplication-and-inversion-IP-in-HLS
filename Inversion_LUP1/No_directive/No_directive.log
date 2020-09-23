@@ -1,0 +1,965 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Inversion_LUP1/inverse.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 183.844 ; gain = 92.863
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 183.844 ; gain = 92.863
+INFO: [HLS 200-10] Starting code transformations ...
+ERROR: [SYNCHK 200-79] Cannot find the top function 'Inverse_top' in the design. Possible causes are: (1) the top function name is misspelled; (2) the top function is nonexistent or declared as static.
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Inversion_LUP1/inverse.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.617 ; gain = 94.461
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.617 ; gain = 94.461
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 186.391 ; gain = 96.234
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'final_perm' (Inversion_LUP1/inverse.cpp:218) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 216.117 ; gain = 125.961
+INFO: [XFORM 203-102] Automatically partitioning small array 'P' (Inversion_LUP1/inverse.cpp:227) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'P' (Inversion_LUP1/inverse.cpp:227) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'final_perm' (Inversion_LUP1/inverse.cpp:218) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 275.254 ; gain = 185.098
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 324.566 ; gain = 234.410
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inverse_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lup' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.108 seconds; current allocated memory: 268.818 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 11 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.596 seconds; current allocated memory: 270.030 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.593 seconds; current allocated memory: 270.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.266 seconds; current allocated memory: 270.654 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.322 seconds; current allocated memory: 270.939 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.285 seconds; current allocated memory: 271.296 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.339 seconds; current allocated memory: 271.468 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.204 seconds; current allocated memory: 271.646 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'final_perm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.276 seconds; current allocated memory: 271.832 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.215 seconds; current allocated memory: 272.058 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.264 seconds; current allocated memory: 272.201 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.695 seconds; current allocated memory: 272.631 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lup' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fsub_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fsub_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'inverse_top_fmul_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fdiv_32ns_32ns_32_16_1' to 'inverse_top_fdiv_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_sitofp_32ns_32_6_1' to 'inverse_top_sitofeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fcmp_32ns_32ns_1_2_1' to 'inverse_top_fcmp_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_mux_42_32_1_1' to 'inverse_top_mux_4g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fcmp_fYi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fsub_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_mux_4g8j': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_sitofeOg': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lup'.
+INFO: [HLS 200-111]  Elapsed time: 1.071 seconds; current allocated memory: 274.800 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fadd_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fadd_hbi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Lower_inv'.
+INFO: [HLS 200-111]  Elapsed time: 1.331 seconds; current allocated memory: 275.983 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Upper_inv'.
+INFO: [HLS 200-111]  Elapsed time: 0.624 seconds; current allocated memory: 276.806 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mult'.
+INFO: [HLS 200-111]  Elapsed time: 0.756 seconds; current allocated memory: 277.256 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'final_perm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'final_perm'.
+INFO: [HLS 200-111]  Elapsed time: 0.52 seconds; current allocated memory: 277.685 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A_inv' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inverse_top' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inverse_top'.
+INFO: [HLS 200-111]  Elapsed time: 0.6 seconds; current allocated memory: 278.400 MB.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_L_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 355.551 ; gain = 265.395
+INFO: [VHDL 208-304] Generating VHDL RTL for inverse_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for inverse_top.
+INFO: [HLS 200-112] Total elapsed time: 28.152 seconds; peak allocated memory: 278.400 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Inversion_LUP1/inverse.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 184.195 ; gain = 93.172
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 184.195 ; gain = 93.172
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 184.301 ; gain = 93.277
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'final_perm' (Inversion_LUP1/inverse.cpp:226) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 215.840 ; gain = 124.816
+INFO: [XFORM 203-102] Automatically partitioning small array 'P' (Inversion_LUP1/inverse.cpp:235) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'P' (Inversion_LUP1/inverse.cpp:235) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'final_perm' (Inversion_LUP1/inverse.cpp:226) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 276.465 ; gain = 185.441
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 324.914 ; gain = 233.891
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inverse_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lup' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 26.274 seconds; current allocated memory: 268.999 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 11 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.788 seconds; current allocated memory: 270.238 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.031 seconds; current allocated memory: 270.602 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.379 seconds; current allocated memory: 270.870 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.518 seconds; current allocated memory: 271.195 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.431 seconds; current allocated memory: 271.556 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.522 seconds; current allocated memory: 271.692 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.314 seconds; current allocated memory: 271.870 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'final_perm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.435 seconds; current allocated memory: 272.092 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.331 seconds; current allocated memory: 272.318 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.398 seconds; current allocated memory: 272.441 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.3 seconds; current allocated memory: 272.886 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lup' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fsub_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fsub_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'inverse_top_fmul_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fdiv_32ns_32ns_32_16_1' to 'inverse_top_fdiv_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_sitofp_32ns_32_6_1' to 'inverse_top_sitofeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fcmp_32ns_32ns_1_2_1' to 'inverse_top_fcmp_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_mux_42_32_1_1' to 'inverse_top_mux_4g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fcmp_fYi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fsub_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_mux_4g8j': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_sitofeOg': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lup'.
+INFO: [HLS 200-111]  Elapsed time: 1.198 seconds; current allocated memory: 275.057 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fadd_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fadd_hbi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Lower_inv'.
+INFO: [HLS 200-111]  Elapsed time: 2.181 seconds; current allocated memory: 276.224 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Upper_inv'.
+INFO: [HLS 200-111]  Elapsed time: 0.911 seconds; current allocated memory: 277.084 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mult'.
+INFO: [HLS 200-111]  Elapsed time: 1.008 seconds; current allocated memory: 277.497 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'final_perm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'final_perm'.
+INFO: [HLS 200-111]  Elapsed time: 0.709 seconds; current allocated memory: 277.931 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A_inv' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inverse_top' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inverse_top'.
+INFO: [HLS 200-111]  Elapsed time: 0.807 seconds; current allocated memory: 278.678 MB.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_L_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:19 ; elapsed = 00:00:46 . Memory (MB): peak = 355.980 ; gain = 264.957
+INFO: [VHDL 208-304] Generating VHDL RTL for inverse_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for inverse_top.
+INFO: [HLS 200-112] Total elapsed time: 45.795 seconds; peak allocated memory: 278.678 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Inversion_LUP1/inverse.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.215 ; gain = 93.020
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.215 ; gain = 93.020
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'lup' into 'inverse_top' (Inversion_LUP1/inverse.cpp:242).
+INFO: [XFORM 203-603] Inlining function 'matrix_mult' into 'inverse_top' (Inversion_LUP1/inverse.cpp:257).
+INFO: [XFORM 203-603] Inlining function 'final_perm' into 'inverse_top' (Inversion_LUP1/inverse.cpp:258).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 187.793 ; gain = 96.598
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'inverse_top' (Inversion_LUP1/inverse.cpp:230->Inversion_LUP1/inverse.cpp:258) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 216.395 ; gain = 125.199
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 2 for loop 'univ_label31' (Inversion_LUP1/inverse.cpp:191:1) in function 'Upper_inv'.
+INFO: [XFORM 203-102] Automatically partitioning small array 'P' (Inversion_LUP1/inverse.cpp:239) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'P' (Inversion_LUP1/inverse.cpp:239) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'inverse_top' (Inversion_LUP1/inverse.cpp:230->Inversion_LUP1/inverse.cpp:258) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Inversion_LUP1/inverse.cpp:84:25) to (Inversion_LUP1/inverse.cpp:86:5) in function 'inverse_top'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 275.660 ; gain = 184.465
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 296.668 ; gain = 205.473
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inverse_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.088 seconds; current allocated memory: 240.005 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.257 seconds; current allocated memory: 240.412 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.364 seconds; current allocated memory: 240.732 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.329 seconds; current allocated memory: 241.131 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.585 seconds; current allocated memory: 242.420 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.778 seconds; current allocated memory: 244.042 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fadd_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fadd_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'inverse_top_fmul_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fdiv_32ns_32ns_32_16_1' to 'inverse_top_fdiv_dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Lower_inv'.
+INFO: [HLS 200-111]  Elapsed time: 0.81 seconds; current allocated memory: 244.801 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Upper_inv'.
+INFO: [HLS 200-111]  Elapsed time: 0.588 seconds; current allocated memory: 245.696 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A_inv' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inverse_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'inverse_top_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_faddfeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_sitofp_32ns_32_6_1' to 'inverse_top_sitoffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fcmp_32ns_32ns_1_2_1' to 'inverse_top_fcmp_g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_mux_42_32_1_1' to 'inverse_top_mux_4hbi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_faddfeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fcmp_g8j': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_mux_4hbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_sitoffYi': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inverse_top'.
+INFO: [HLS 200-111]  Elapsed time: 0.914 seconds; current allocated memory: 248.574 MB.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_L_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 327.023 ; gain = 235.828
+INFO: [VHDL 208-304] Generating VHDL RTL for inverse_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for inverse_top.
+INFO: [HLS 200-112] Total elapsed time: 23.611 seconds; peak allocated memory: 248.574 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Inversion_LUP1/inverse.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.281 ; gain = 94.098
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.281 ; gain = 94.098
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 187.309 ; gain = 97.125
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'final_perm' (Inversion_LUP1/inverse.cpp:227) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 217.570 ; gain = 127.387
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 2 for loop 'univ_label31' (Inversion_LUP1/inverse.cpp:190:1) in function 'Upper_inv'.
+INFO: [XFORM 203-102] Automatically partitioning small array 'P' (Inversion_LUP1/inverse.cpp:236) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'P' (Inversion_LUP1/inverse.cpp:236) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'final_perm' (Inversion_LUP1/inverse.cpp:227) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 276.371 ; gain = 186.188
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 324.977 ; gain = 234.793
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inverse_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lup' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.408 seconds; current allocated memory: 269.033 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 11 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.562 seconds; current allocated memory: 270.273 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.624 seconds; current allocated memory: 270.621 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.262 seconds; current allocated memory: 270.889 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.377 seconds; current allocated memory: 271.214 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.325 seconds; current allocated memory: 271.576 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.422 seconds; current allocated memory: 271.711 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.247 seconds; current allocated memory: 271.890 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'final_perm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.263 seconds; current allocated memory: 272.112 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 272.338 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.262 seconds; current allocated memory: 272.460 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.703 seconds; current allocated memory: 272.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lup' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fsub_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fsub_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'inverse_top_fmul_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fdiv_32ns_32ns_32_16_1' to 'inverse_top_fdiv_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_sitofp_32ns_32_6_1' to 'inverse_top_sitofeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fcmp_32ns_32ns_1_2_1' to 'inverse_top_fcmp_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_mux_42_32_1_1' to 'inverse_top_mux_4g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fcmp_fYi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fsub_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_mux_4g8j': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_sitofeOg': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lup'.
+INFO: [HLS 200-111]  Elapsed time: 0.75 seconds; current allocated memory: 275.076 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fadd_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fadd_hbi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Lower_inv'.
+INFO: [HLS 200-111]  Elapsed time: 1.339 seconds; current allocated memory: 276.244 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Upper_inv'.
+INFO: [HLS 200-111]  Elapsed time: 0.656 seconds; current allocated memory: 277.103 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mult'.
+INFO: [HLS 200-111]  Elapsed time: 0.733 seconds; current allocated memory: 277.517 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'final_perm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'final_perm'.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 277.951 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A_inv' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inverse_top' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inverse_top'.
+INFO: [HLS 200-111]  Elapsed time: 0.498 seconds; current allocated memory: 278.697 MB.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_L_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 357.023 ; gain = 266.840
+INFO: [VHDL 208-304] Generating VHDL RTL for inverse_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for inverse_top.
+INFO: [HLS 200-112] Total elapsed time: 27.579 seconds; peak allocated memory: 278.697 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Inversion_LUP1/inverse.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.578 ; gain = 94.668
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.578 ; gain = 94.668
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 184.578 ; gain = 94.668
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'final_perm' (Inversion_LUP1/inverse.cpp:228) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 216.313 ; gain = 126.402
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 2 for loop 'univ_label31' (Inversion_LUP1/inverse.cpp:191:1) in function 'Upper_inv'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 3 for loop 'swap_row' (Inversion_LUP1/inverse.cpp:69:1) in function 'lup'.
+INFO: [XFORM 203-102] Automatically partitioning small array 'P' (Inversion_LUP1/inverse.cpp:237) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'P' (Inversion_LUP1/inverse.cpp:237) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'final_perm' (Inversion_LUP1/inverse.cpp:228) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 276.215 ; gain = 186.305
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 324.961 ; gain = 235.051
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inverse_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lup' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 20.361 seconds; current allocated memory: 269.035 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 11 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.52 seconds; current allocated memory: 270.274 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.628 seconds; current allocated memory: 270.622 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.256 seconds; current allocated memory: 270.891 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.349 seconds; current allocated memory: 271.215 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.386 seconds; current allocated memory: 271.577 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.368 seconds; current allocated memory: 271.713 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.246 seconds; current allocated memory: 271.891 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'final_perm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.327 seconds; current allocated memory: 272.113 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.262 seconds; current allocated memory: 272.339 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.309 seconds; current allocated memory: 272.462 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.679 seconds; current allocated memory: 272.907 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lup' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fsub_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fsub_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'inverse_top_fmul_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fdiv_32ns_32ns_32_16_1' to 'inverse_top_fdiv_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_sitofp_32ns_32_6_1' to 'inverse_top_sitofeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fcmp_32ns_32ns_1_2_1' to 'inverse_top_fcmp_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_mux_42_32_1_1' to 'inverse_top_mux_4g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fcmp_fYi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fsub_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_mux_4g8j': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_sitofeOg': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lup'.
+INFO: [HLS 200-111]  Elapsed time: 0.801 seconds; current allocated memory: 275.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fadd_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fadd_hbi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Lower_inv'.
+INFO: [HLS 200-111]  Elapsed time: 1.324 seconds; current allocated memory: 276.245 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Upper_inv'.
+INFO: [HLS 200-111]  Elapsed time: 0.614 seconds; current allocated memory: 277.105 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mult'.
+INFO: [HLS 200-111]  Elapsed time: 0.714 seconds; current allocated memory: 277.518 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'final_perm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'final_perm'.
+INFO: [HLS 200-111]  Elapsed time: 0.504 seconds; current allocated memory: 277.952 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A_inv' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inverse_top' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inverse_top'.
+INFO: [HLS 200-111]  Elapsed time: 0.593 seconds; current allocated memory: 278.699 MB.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_L_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:33 . Memory (MB): peak = 356.727 ; gain = 266.816
+INFO: [VHDL 208-304] Generating VHDL RTL for inverse_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for inverse_top.
+INFO: [HLS 200-112] Total elapsed time: 33.459 seconds; peak allocated memory: 278.699 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Inversion_LUP1/inverse.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.078 ; gain = 92.922
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.078 ; gain = 92.922
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 187.125 ; gain = 95.969
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'final_perm' (Inversion_LUP1/inverse.cpp:228) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 215.805 ; gain = 124.648
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 2 for loop 'univ_label31' (Inversion_LUP1/inverse.cpp:191:1) in function 'Upper_inv'.
+INFO: [XFORM 203-102] Automatically partitioning small array 'P' (Inversion_LUP1/inverse.cpp:237) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'P' (Inversion_LUP1/inverse.cpp:237) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'final_perm' (Inversion_LUP1/inverse.cpp:228) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 276.172 ; gain = 185.016
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 324.930 ; gain = 233.773
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inverse_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lup' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 15.564 seconds; current allocated memory: 269.033 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 11 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.535 seconds; current allocated memory: 270.273 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.606 seconds; current allocated memory: 270.621 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.274 seconds; current allocated memory: 270.889 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.323 seconds; current allocated memory: 271.214 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 271.576 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 271.711 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.259 seconds; current allocated memory: 271.890 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'final_perm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.329 seconds; current allocated memory: 272.112 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.264 seconds; current allocated memory: 272.338 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.252 seconds; current allocated memory: 272.460 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.713 seconds; current allocated memory: 272.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lup' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fsub_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fsub_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'inverse_top_fmul_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fdiv_32ns_32ns_32_16_1' to 'inverse_top_fdiv_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_sitofp_32ns_32_6_1' to 'inverse_top_sitofeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fcmp_32ns_32ns_1_2_1' to 'inverse_top_fcmp_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'inverse_top_mux_42_32_1_1' to 'inverse_top_mux_4g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fcmp_fYi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fsub_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_mux_4g8j': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_sitofeOg': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lup'.
+INFO: [HLS 200-111]  Elapsed time: 0.722 seconds; current allocated memory: 275.076 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Lower_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'inverse_top_fadd_32ns_32ns_32_5_full_dsp_1' to 'inverse_top_fadd_hbi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Lower_inv'.
+INFO: [HLS 200-111]  Elapsed time: 1.319 seconds; current allocated memory: 276.244 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Upper_inv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fdiv_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Upper_inv'.
+INFO: [HLS 200-111]  Elapsed time: 0.641 seconds; current allocated memory: 277.103 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fadd_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'inverse_top_fmul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mult'.
+INFO: [HLS 200-111]  Elapsed time: 0.703 seconds; current allocated memory: 277.517 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'final_perm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'final_perm'.
+INFO: [HLS 200-111]  Elapsed time: 0.513 seconds; current allocated memory: 277.951 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inverse_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverse_top/A_inv' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inverse_top' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inverse_top'.
+INFO: [HLS 200-111]  Elapsed time: 0.666 seconds; current allocated memory: 278.698 MB.
+INFO: [RTMG 210-278] Implementing memory 'inverse_top_L_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 355.938 ; gain = 264.781
+INFO: [VHDL 208-304] Generating VHDL RTL for inverse_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for inverse_top.
+INFO: [HLS 200-112] Total elapsed time: 28.701 seconds; peak allocated memory: 278.698 MB.

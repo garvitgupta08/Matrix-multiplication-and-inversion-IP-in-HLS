@@ -1,0 +1,25 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../inverse_test.cpp in debug mode
+   Compiling ../../../inverse.cpp in debug mode
+   Generating csim.exe
+
+Singularity Check = 0
+
+**************Printing A Matrix*************
+2.000000 7.000000 6.000000 
+9.000000 5.000000 1.000000 
+4.000000 3.000000 8.000000 
+
+**********Printing Inverse Matrix**********
+-0.102778 0.105556 0.063889 
+0.188889 0.022222 -0.144444 
+-0.019444 -0.061111 0.147222 
+
+*********Printing Identity Matrix***********
+1.000000 0.000000 0.000000 
+-0.000000 1.000000 0.000000 
+-0.000000 0.000000 1.000000 
+PASS
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
